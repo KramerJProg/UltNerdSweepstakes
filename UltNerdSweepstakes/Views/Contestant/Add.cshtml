@@ -3,18 +3,31 @@
     ViewData["Title"] = "Enter Sweepstakes";
 }
 
-<h1>Enter Sweepstakes</h1>
+@if (ViewData["Added"] == null)
+{
+    <h1 class="text-center bg-dark text-white">Enter Sweepstakes</h1>
 
-<form method="post">
-    <label>Full Name:</label>
-    <input type="text" name="full-name" />
-    <br />
+    <form method="post">
+        <div class="form-group">
+            <label>Full Name:</label>
+            <input class="form-control" type="text" name="full-name" />
+        </div>
 
-    <label>Email:</label>
-    <input type="text" name="email" />
-    <br />
+        <div class="form-group">
+            <label>Email:</label>
+            <input class="form-control" type="text" name="email" />
+        </div>
 
-    <label>Primary Phone:</label>
-    <input type="text" name="phone" />
-    <br />
-</form>
+        <div class="form-group">
+            <label>Primary Phone:</label>
+            <input class="form-control" type="text" name="phone" />
+         </div>
+
+            <input type="submit" value="Enter Contest!" />
+
+    </form>
+}
+else
+{
+    <div class="text-center alert-success">@ViewData["Added"]</div>
+}
