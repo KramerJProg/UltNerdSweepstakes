@@ -15,6 +15,7 @@ namespace UltNerdSweepstakes.Models
         /// The first and last name of the contestant
         /// </summary>
         [Display(Name ="Full Name:")]
+        [Required(ErrorMessage ="To enter, you must provide your Full Name!")]
         public string FullName { get; set; }
 
         /// <summary>
@@ -23,6 +24,7 @@ namespace UltNerdSweepstakes.Models
         /// </summary>
         [Display(Name ="E-mail:")]
         [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "To enter, you must provide your E-mail address!")]
         public string Email { get; set; }
 
         /// <summary>
@@ -30,6 +32,7 @@ namespace UltNerdSweepstakes.Models
         /// </summary>
         [Display(Name ="Primary Phone:")]
         [DataType(DataType.PhoneNumber)]
+        [Required(ErrorMessage ="To contact you if you won, we need your phone number!")]
         public string Phone { get; set; }
     }
 }

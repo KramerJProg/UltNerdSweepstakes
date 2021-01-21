@@ -43,7 +43,9 @@ namespace UltNerdSweepstakes.Controllers
         {
             if (ModelState.IsValid)
             {
+                ViewData["Message"] = $"{cont.FullName}, congrats! You've have entered the contest!";
 
+                // This is where we add to the database!
             }
             return View();
         }
