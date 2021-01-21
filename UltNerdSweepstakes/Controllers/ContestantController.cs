@@ -31,5 +31,21 @@ namespace UltNerdSweepstakes.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public IActionResult UsingModelBinding()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult UsingModelBinding(Contestant cont)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View();
+        }
     }
 }
