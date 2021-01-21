@@ -1,0 +1,26 @@
+﻿@model Contestant
+@{
+    ViewData["Title"] = "UsingModelBinding";
+}
+
+
+<h1 class="text-center bg-dark text-white">Using ModelBinding</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control" />
+        <span asp-validation-for="FullName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone"></span>
+    </div>
+    <input class="btn btn-info" type="submit" value="Enter Contest!" />
+</form>
